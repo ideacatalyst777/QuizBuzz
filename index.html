@@ -12,9 +12,15 @@
     <div class="glow glow-two"></div>
 
     <header class="header">
-        <h2 class="logo">⚡ QuizBuzz</h2>
-        <button id="sound-toggle-btn" class="sound-btn">🔊 Sound On</button>
-    </header>
+    <h2 class="logo">⚡ QuizBuzz</h2>
+
+    <nav class="nav-menu">
+        <button id="home-menu-btn" class="nav-btn active">Home</button>
+        <button id="quizzes-menu-btn" class="nav-btn">Quizzes</button>
+    </nav>
+
+    <button id="sound-toggle-btn" class="sound-btn">🔊 Sound On</button>
+</header>
 
     <main class="container">
 
@@ -71,6 +77,51 @@
 </button>
             </div>
         </section>
+<section id="quizzes-screen" class="screen">
+
+    <div class="hero">
+        <span class="hero-tag">EXPLORE AND LEARN</span>
+        <h1>Choose Your <span>Quiz.</span></h1>
+        <p>Select a category and test your knowledge!</p>
+    </div>
+
+    <div class="quiz-category-grid">
+
+        <div class="quiz-category-card">
+            <div class="category-icon">📚</div>
+            <h2>All Quizzes</h2>
+            <p>Practice all available questions.</p>
+            <span class="question-count" id="all-question-count">20 Questions</span>
+            <button class="primary-btn category-start-btn" data-category="All">
+                Start Quiz →
+            </button>
+        </div>
+
+        <div class="quiz-category-card">
+            <div class="category-icon">🌐</div>
+            <h2>HTML & CSS</h2>
+            <p>Test your knowledge of web development.</p>
+            <span class="question-count" id="html-question-count">10 Questions</span>
+            <button class="primary-btn category-start-btn" data-category="HTML/CSS">
+                Start Quiz →
+            </button>
+        </div>
+
+        <div class="quiz-category-card">
+            <div class="category-icon">💻</div>
+            <h2>JavaScript</h2>
+            <p>Improve your JavaScript programming skills.</p>
+            <span class="question-count" id="js-question-count">10 Questions</span>
+            <button class="primary-btn category-start-btn" data-category="JavaScript">
+                Start Quiz →
+            </button>
+        </div>
+
+    </div>
+
+    <button id="quizzes-home-btn" class="text-btn">← Back to Home</button>
+
+</section>
 
         <section id="quiz-screen" class="screen">
 
