@@ -1,4 +1,3 @@
-
 const questions = [
     {
         category: "HTML/CSS",
@@ -15,7 +14,7 @@ const questions = [
     {
         category: "HTML/CSS",
         question: "Which tag is used to create a hyperlink?",
-        options: ["link", "a", "href", "url"],
+        options: ["<link>", "<a>", "<href>", "<url>"],
         answer: 1,
         explanation: "The a tag is used to create hyperlinks."
     },
@@ -29,7 +28,7 @@ const questions = [
     {
         category: "HTML/CSS",
         question: "Which HTML tag creates an unordered list?",
-        options: ["ol", "li", "ul", "list"],
+        options: ["<ol>", "<li>", "<ul>", "<list>"],
         answer: 2,
         explanation: "The ul tag creates an unordered list."
     },
@@ -43,7 +42,7 @@ const questions = [
     {
         category: "HTML/CSS",
         question: "Which HTML tag is used to insert an image?",
-        options: ["image", "img", "picture", "src"],
+        options: ["<image>", "<img>", "<picture>", "<src>"],
         answer: 1,
         explanation: "The img tag is used to display an image."
     },
@@ -57,7 +56,7 @@ const questions = [
     {
         category: "HTML/CSS",
         question: "Which HTML tag is used to create a table row?",
-        options: ["td", "th", "tr", "table-row"],
+        options: ["<td>", "<th>", "<tr>", "<table-row>"],
         answer: 2,
         explanation: "The tr tag creates a table row."
     },
@@ -71,7 +70,7 @@ const questions = [
     {
         category: "HTML/CSS",
         question: "Which HTML tag is used to create a form?",
-        options: ["input", "button", "form", "label"],
+        options: ["<input>", "<button>", "<form>", "<label>"],
         answer: 2,
         explanation: "The form tag is used to create an HTML form."
     },
@@ -805,4 +804,3 @@ document.getElementById("review-home-btn")
 updateHighScoreDisplay();
 
 showScreen(startScreen);
-
