@@ -478,8 +478,6 @@ function showResults() {
 }
 
 
-// HIGH SCORE
-
 function getHighScore() {
     return Number(localStorage.getItem("quizbuzz_highscore")) || 0;
 }
@@ -521,8 +519,6 @@ document.getElementById("reset-highscore-btn")
         alert("High score has been reset!");
     });
 
-
-// REVIEW ANSWERS
 
 function updateReviewCounts() {
 
@@ -800,6 +796,62 @@ document.getElementById("review-home-btn")
     .addEventListener("click", function() {
         showScreen(startScreen);
     });
+
+
+const quizzesScreen = document.getElementById("quizzes-screen");
+
+document.getElementById("home-menu-btn")
+    .addEventListener("click", function() {
+        showScreen(startScreen);
+        setActiveMenu(this);
+    });
+
+document.getElementById("quizzes-menu-btn")
+    .addEventListener("click", function() {
+        showScreen(quizzesScreen);
+        setActiveMenu(this);
+    });
+
+document.getElementById("quizzes-home-btn")
+    .addEventListener("click", function() {
+        showScreen(startScreen);
+        setActiveMenu(document.getElementById("home-menu-btn"));
+    });
+
+
+document.getElementById("all-question-count").textContent =
+    questions.length + " Questions";
+
+document.getElementById("html-question-count").textContent =
+    questions.filter(item => item.category === "HTML/CSS").length + " Questions";
+
+document.getElementById("js-question-count").textContent =
+    questions.filter(item => item.category === "JavaScript").length + " Questions";
+
+
+document.querySelectorAll(".category-start-btn")
+    .forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+            categorySelect.value = this.dataset.category;
+
+            startQuiz();
+
+        });
+
+    });
+
+
+
+function setActiveMenu(button) {
+
+    document.querySelectorAll(".nav-btn").forEach(function(item) {
+        item.classList.remove("active");
+    });
+
+    button.classList.add("active");
+}
 
 updateHighScoreDisplay();
 
